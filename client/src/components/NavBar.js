@@ -14,15 +14,14 @@ const additionalLinks = (history) => {
   if (isAuthenticated()) {
     return (
       <span>
-          {' '}  {' '}  {' '}  {' '}  {' '}
         <NavLink
           activeStyle={styles.active}
           to="/dashboard"
         >
           Dashboard
         </NavLink>
-        {' '}  {' '}  {' '}  {' '}  {' '}  {' '}
-        <a
+        {' '}
+        <a 
           href="#"
           onClick={ () => {
             logout()
@@ -47,15 +46,15 @@ const additionalLinks = (history) => {
 
 const NavBar = ({ history }) => (
   <nav>
-    <NavLink
+    <NavLink 
       exact
-      activeStyle={styles.active}
+      activeStyle={styles.active} 
       to="/"
     >
       Home
     </NavLink>
     {' '}
-    <NavLink
+    <NavLink 
       to="/about"
       activeStyle={styles.active}
     >

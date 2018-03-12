@@ -44,6 +44,7 @@ class Dashboard extends React.Component {
           showForm: false
         })
       })
+      .catch( err => console.log(err.response.data) )
   }
 
   render() {
@@ -52,7 +53,7 @@ class Dashboard extends React.Component {
       <div>
         <h2>Products</h2>
         <button onClick={this.toggleForm}>
-          { showForm ? 'Hide' : 'Show' }
+          { showForm ? 'Hide' : 'Show' } 
         </button>
         { showForm ? this.form() : this.show() }
       </div>

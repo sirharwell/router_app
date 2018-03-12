@@ -15,7 +15,7 @@ class Api::ProductsController < ApplicationController
     if product.save
       render json: product
     else
-      render json: product.errors, status: 422
+      render json: product.errors.full_messages.join(', '), status: 422
     end
   end
 
@@ -30,7 +30,7 @@ class Api::ProductsController < ApplicationController
   def destroy
     @product.destroy
   end
-
+ 
   private
     def product_params
       params.require(:product).permit(:name, :description, :department, :price)

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const NoMatch = () => (
-  <h5> 404 </h5>
+const NoMatch = ({ location }) => (
+  <h2>404 no route matches {location.pathname}</h2>
 )
 
-export default NoMatch;
+export default NoMatch

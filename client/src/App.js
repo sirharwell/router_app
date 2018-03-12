@@ -8,19 +8,21 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Product from './components/Product';
 import ProtectedRoute from './components/ProtectedRoute';
+//import CarWrapper from './components/CarWrapper';
 
 const App = () => (
- <div>
-   <NavBar />
-   <Switch>
-     <Route exact path="/" component={Home} />
-     <Route exact path="/about" component={About} />
-     <Route exact path="/login" component={Login} />
-     <ProtectedRoute exact path="/dashboard" component={Dashboard} />
-     <ProtectedRoute exact path="/products/:id" component={Product} />
-     <Route component={NoMatch} />
-   </Switch>
- </div>
+  <div>
+    <NavBar />
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/login" component={Login} />
+      <ProtectedRoute exact path="/dashboard" component={Dashboard} />
+      <ProtectedRoute exact path="/products/:id" component={Product} />
+      {/*<Route path="/cars" component={CarWrapper} /> */}
+      <Route component={NoMatch} />
+    </Switch>
+  </div>
 )
 
 export default App;
